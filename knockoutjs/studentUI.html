@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knockout.js Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+</head>
+<body>
+    <h1>Department</h1>
+    <div>
+        <label>Department Name:</label>
+        <input type="text" data-bind="value: departmentName" />
+    </div>
+
+    <h1>Students</h1>
+    <div>
+        <ul data-bind="foreach: students">
+            <li>
+                <label>Student Name:</label>
+                <input type="text" data-bind="value: name" />
+                <label>Age:</label>
+                <input type="number" data-bind="value: age" />
+            </li>
+        </ul>
+    </div>
+
+    <h1>Subjects</h1>
+    <div>
+        <ul data-bind="foreach: subjects">
+            <li>
+                <label>Subject Name:</label>
+                <input type="text" data-bind="value: name" />
+                <label>Marks:</label>
+                <input type="number" data-bind="value: marks" />
+            </li>
+        </ul>
+    </div>
+
+    <button data-bind="click: addStudent">Add Student</button>
+    <button data-bind="click: addSubject">Add Subject</button>
+
+    <script src="student.js"></script>
+</body>
+</html>
